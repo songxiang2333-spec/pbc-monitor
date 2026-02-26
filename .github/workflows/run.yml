@@ -2,7 +2,7 @@ name: PBC Monitor
 
 on:
   schedule:
-    - cron: "0 1,7 * * *"
+  cron: '0 */3 * * *'
   workflow_dispatch:
 
 jobs:
