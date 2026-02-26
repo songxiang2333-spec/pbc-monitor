@@ -23,7 +23,10 @@ jobs:
 
       - name: Run monitor
         run: python monitor.py
-
+        env:
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
+          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
       - name: Commit history
         run: |
           git config --global user.name "github-actions"
