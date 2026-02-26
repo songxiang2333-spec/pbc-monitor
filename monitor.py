@@ -88,7 +88,7 @@ def parse_list(html):
 # ==============================
 # 检查是否包含关键词（查详情页）
 # ==============================
-KEYWORDS = ["桌面操作系统", "服务器操作系统"]
+KEYWORDS = ["桌面操作系统", "服务器操作系统","信创","麒麟","中科方德"]
 
 def contains_keyword(url):
     html = fetch_page(url)
@@ -139,7 +139,7 @@ def main():
         for item in new_matches:
             body += f"{item['title']}\n{item['link']}\n\n"
 
-        send_email("【新增】操作系统招标公告", body)
+        send_email("【新增】央行操作系统招标公告", body)
 
     save_history(history)
     print("检测完成")
